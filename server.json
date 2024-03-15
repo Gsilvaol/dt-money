@@ -1,28 +1,60 @@
 {
-    "transactions": [
-        {
-            "id": 1,
-            "description": "Desenvolvimento de site",
-            "type": "income",
-            "category": "Venda",
-            "price": 14000,
-            "createdAt": "2024-03-13T14:46:44.505Z"
-        },
-        {
-            "id": 2,
-            "description": "Hambúrguer",
-            "type": "outcome",
-            "category": "Alimentação",
-            "price": 50,
-            "createdAt": "2024-03-13T13:49:44.505Z"
-        },
-        {
-            "id": 3,
-            "description": "Ignite Rocketseat",
-            "type": "outcome",
-            "category": "Educação",
-            "price": 1980,
-            "createdAt": "2024-03-13T16:20:44.505Z"
-        }
-    ]
+  "transactions": [
+    {
+      "id": 1,
+      "description": "Desenvolvimento de site",
+      "type": "income",
+      "category": "Venda",
+      "price": 14000,
+      "createdAt": "2024-03-13T14:46:44.505Z"
+    },
+    {
+      "id": 2,
+      "description": "Hambúrguer",
+      "type": "outcome",
+      "category": "Alimentação",
+      "price": 50,
+      "createdAt": "2024-03-13T13:49:44.505Z"
+    },
+    {
+      "id": 3,
+      "description": "Ignite Rocketseat",
+      "type": "outcome",
+      "category": "Educação",
+      "price": 1980,
+      "createdAt": "2024-03-13T16:20:44.505Z"
+    },
+    {
+      "description": "desenvolvimento de app",
+      "price": 10000,
+      "category": "Venda",
+      "type": "income",
+      "createdAt": "2024-03-15T18:16:43.074Z",
+      "id": 4
+    },
+    {
+      "description": "Bombom",
+      "price": 5,
+      "category": "Alimentação",
+      "type": "outcome",
+      "createdAt": "2024-03-15T19:13:27.285Z",
+      "id": 5
+    },
+    {
+      "description": "Chocolate",
+      "price": 10,
+      "category": "Alimentação",
+      "type": "outcome",
+      "createdAt": "2024-03-15T19:14:23.917Z",
+      "id": 6
+    },
+    {
+      "description": "pizza",
+      "price": 50,
+      "category": "Alimentação",
+      "type": "outcome",
+      "createdAt": "2024-03-15T19:25:20.547Z",
+      "id": 7
+    }
+  ]
 }
