@@ -1,49 +1,51 @@
-import { useContext } from "react";
-import { Header } from "../../components/Header";
-import { Summary } from "../../components/Summary";
-import { SearchForm } from "./components/SearchForm";
+import { useContext } from 'react'
+import { Header } from '../../components/Header'
+import { Summary } from '../../components/Summary'
+import { SearchForm } from './components/SearchForm'
 
-import { PriceHiglight, TransactionsContainer, TransactionsTable } from "./styles";
-import { TransactionsContext } from "../../contexts/TransactionsContext";
-import { dateFormatter, priceFormatter } from "../../utils/formatter";
-
+import {
+  PriceHiglight,
+  TransactionsContainer,
+  TransactionsTable,
+} from './styles'
+import { TransactionsContext } from '../../contexts/TransactionsContext'
+import { dateFormatter, priceFormatter } from '../../utils/formatter'
 
 export function Transactions() {
-    const { transactions } = useContext(TransactionsContext)
+  const { transactions } = useContext(TransactionsContext)
 
-    console.log(transactions)
+  console.log(transactions)
 
-    return (
-        <div>
-            <Header />
-            <Summary />
+  return (
+    <div>
+      <Header />
+      <Summary />
 
-            <TransactionsContainer>
-                <SearchForm />
-                
-                <TransactionsTable>
-                    <tbody>
-                        
-                        {transactions.map(transaction => {
-                            return (
-                                <tr key={transaction.id}>
-                                    <td width="50%">{transaction.description}</td>
-                                    <td>
-                                        <PriceHiglight variant={transaction.type}>
-                                            {transaction.type === 'outcome' && '- '}
-                                            {priceFormatter.format(transaction.price)}
-                                        </PriceHiglight>
-                                    </td>
-                                    <td>{transaction.category}</td>
-                                    <td>{dateFormatter.format(new Date(transaction.createdAt))}</td>
-                                </tr>
-                            )
-                        })}
+      <TransactionsContainer>
+        <SearchForm />
 
-                    </tbody>
-                </TransactionsTable>
-            </TransactionsContainer>
-        
-        </div >
-    )
+        <TransactionsTable>
+          <tbody>
+            {transactions.map((transaction) => {
+              return (
+                <tr key={transaction.id}>
+                  <td width="50%">{transaction.description}</td>
+                  <td>
+                    <PriceHiglight variant={transaction.type}>
+                      {transaction.type === 'outcome' && '- '}
+                      {priceFormatter.format(transaction.price)}
+                    </PriceHiglight>
+                  </td>
+                  <td>{transaction.category}</td>
+                  <td>
+                    {dateFormatter.format(new Date(transaction.createdAt))}
+                  </td>
+                </tr>
+              )
+            })}
+          </tbody>
+        </TransactionsTable>
+      </TransactionsContainer>
+    </div>
+  )
 }
